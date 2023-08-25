@@ -1,0 +1,52 @@
+
+<div class="d-flex justify-content-center p-4 p-md-0">
+  <form
+    class="rounded p-3 col-12 col-md-4 my-4 shadow-lg"
+    method="POST"
+    style=""
+    action="/create-session"
+  >
+    <h3 class="mb-4 text-center">Sign in</h3>
+    <!-- Email input -->
+    <div class="form-outline mb-3">
+      <label class="form-label" for="email">Email Address</label>
+      <input
+      type="email"
+      id="email"
+      placeholder="Enter Email Address"
+      name="email"
+      class="form-control" />
+    </div>
+
+    <!-- Password input -->
+    <div class="form-outline mb-3">
+      <label class="form-label" for="password">Password</label>
+      <input
+        type="password"
+        placeholder="Enter Password"
+        id="password"
+        name="password"
+        class="form-control"
+      />
+    </div>
+
+    <div>
+      <!-- Login button -->
+      <button
+        type="submit"
+        class="btn btn-primary btn-block fw-semibold"
+        style="width: 100%"
+      >
+        LOGIN
+      </button>
+    </div>
+    <div>
+      <hr />
+    </div>
+
+    <!-- Link to redirect to signup page -->
+    <div class="text-center">
+      <p>Not an user? <a href="/sign-up">Register</a></p>
+    </div>
+  </form>
+</div>

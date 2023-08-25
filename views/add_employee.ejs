@@ -1,0 +1,86 @@
+<% if(locals.user && locals.user.role === 'admin') {%>
+<div class="d-flex justify-content-center p-4 p-md-0">
+  <form
+    class="rounded p-3 col-12 col-md-4 mt-4 shadow-lg"
+    action="/create-employee"
+    method="POST"
+  >
+    <h3 class="mb-3 text-center">Add an employee</h3>
+
+    <!-- Username input -->
+    <div class="form-outline mb-2">
+      <label class="form-label" for="username">User Name</label>
+      <input
+        type="text"
+        placeholder="Enter User Name"
+        id="name"
+        name="username"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <!-- Email input -->
+    <div class="form-outline mb-2">
+      <label class="form-label" for="email">Email Address</label>
+      <input
+        type="email"
+        placeholder="Enter Email Address"
+        id="email"
+        name="email"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <!-- Password input -->
+    <div class="form-outline mb-2">
+      <label class="form-label" for="password">Password</label>
+      <input
+        type="password"
+        placeholder="Enter Password"
+        id="password"
+        name="password"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <!-- Confirm password input -->
+    <div class="form-outline mb-2">
+      <label class="form-label" for="confirm_password">Confirm password</label>
+      <input
+        type="password"
+        id="confirm_password"
+        placeholder="Confirm Password"
+        name="confirm_password"
+        class="form-control"
+        required
+      />
+    </div>
+
+    <div class="my-3 d-flex justify-content-between">
+
+      <!-- Cancel button -->
+      <a href="/admin-dashboard" 
+        class="btn text-light bg-danger btn-block fw-semibold"       
+        style="width: 45%;">      
+          CANCEL
+      </a>
+      
+      <!-- Add button -->
+      <button
+      type="submit"
+      class="btn btn-primary fw-semibold"
+      style="width: 45%"
+      >
+      ADD
+    </button>
+    
+  </div>
+      
+
+    
+</div>
+
+<%} %>
